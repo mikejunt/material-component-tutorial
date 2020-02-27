@@ -1,0 +1,17 @@
+@import '~angular/material.theming';
+
+@mixin target-component-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    
+    .header {
+        background-color: mat-color($accent);
+        color: mat-color($warn);
+    }
+
+    .holder {
+        background-color: mat-color($warn);
+        color: mat-color($primary);
+    }
+}
