@@ -228,6 +228,10 @@ $altTheme: mat-light-theme($maintheme-primary, $maintheme-accent, $maintheme-war
   color: mat-color($maintheme-primary);
 }
 
+.materialbar.mat-toolbar>h3 {
+  font-size: larger;
+}
+
 
 
 // Specific component overrides, pieces that are not in line with the general theming
