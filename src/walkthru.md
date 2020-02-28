@@ -1,13 +1,13 @@
 ## Referencing Angular Material Theme Colors for Styling
 ## With Bonus 'Altering Angular Material styling' Content
 
-We are going to begin with a generated Angular Material Custom Theme.   This is all possible with a pre-built theme, but much more difficult because the css is already minified and you do not know the theme names.   
+We are going to begin with a generated Angular Material Custom Theme.   This is all possible with a pre-built theme, but much more difficult because the css is already minified and you do not know the exact name of the theme variables.   
 
 It should be noted that many AM stylings themselves do not work properly if your app is not properly configured for it.  This is covered in their theming guide but bears emphasizing:
 
 Many Material styles are nonfunctional if the content is not either:
 
-* Placed within a <mat-sidenav-container> element.
+* Placed within a \<mat-sidenav-container> element.
 or
 * You have not added class="mat-app-background" to the body element of your index.html (the same place they automatically add mat-typography).
 
@@ -15,7 +15,7 @@ These set the 'background' element for the light/dark theme background of your a
 
 ## Angular Material and SASS
 
-Angular Materials' themes are generated using function-type features of SASS.   This all occurs in the custom theme file (usually your /app/styles.scss, though it can be in another file that is imported).   The SASS output is then -appended directly into the DOM in <style> tags in the <head> of index.html.    This is a big part of why Angular Material is so difficult to modify: because the css is injected directly into the DOM, it is always more recent than your component stylesheets and classes, and overwrites them by cascading principle.   
+Angular Materials' themes are generated using function-type features of SASS.   This all occurs in the custom theme file (usually your /app/styles.scss, though it can be in another file that is imported).   The SASS output is then -appended directly into the DOM in \<style> tags in the \<head> of index.html.    This is a big part of why Angular Material is so difficult to modify: because the css is injected directly into the DOM, it is always more recent than your component stylesheets and classes, and overwrites them by cascading principle.   
 
 Similarly, the variables that refer to the theme colors only exist in the SASS file that defines and processes them.  Consequently, to either style your components in your theme colors (and have them respond if you change themes!) or to modify Material element styles, we must do the same thing: utilize SASS in the styles.scss file.
 
@@ -27,8 +27,8 @@ I will then show you how to make simpler changes.   This is only really appropri
 
 We will begin with the 'intended' route.   We have already completed a few steps along this route. 
 
-* ~~Define your custom theme.
-* ~~Create the component you intend to style and put classes on it to reference.
+* Complete: Define your custom theme.
+* Complete: Create the component you intend to style and put classes on it to reference.
 * Use Angular Material's Theming functions to define a theme mixin (essentially a function) for our custom component
 * Import the component theme mixin to styles.scss
 * Include the component theme, passing it the application theme as an argument.
