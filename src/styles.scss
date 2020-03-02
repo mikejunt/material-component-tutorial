@@ -225,7 +225,7 @@ $altTheme: mat-light-theme($maintheme-primary, $maintheme-accent, $maintheme-war
 
 .holder {
   background-color: mat-color($maintheme-warn);
-  color: mat-color($maintheme-primary);
+  color: mat-color($maintheme-primary, default-contrast);
 }
 
 .materialbar.mat-toolbar>h3 {
